@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scirocco Nerò</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Aziendale" width="250" style="filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));">
+        </div>
+        
+        <div class="flags">
+            <button onclick="toggleLanguageDropdown()">
+                <img src="flags/it.png" alt="Cambia Lingua" width="30">
+            </button>
+            
+            <div id="language-dropdown" class="hidden">
+                <img src="flags/it.png" alt="Italiano" onclick="changeLanguage('it')">
+                <img src="flags/en.png" alt="English" onclick="changeLanguage('en')">
+                <img src="flags/fr.png" alt="Français" onclick="changeLanguage('fr')">
+                <img src="flags/es.png" alt="Español" onclick="changeLanguage('es')">
+                <img src="flags/de.png" alt="Deutsch" onclick="changeLanguage('de')">
+                <img src="flags/nl.png" alt="Nederlands" onclick="changeLanguage('nl')">
+                <img src="flags/se.png" alt="Svenska" onclick="changeLanguage('sv')">
+                <img src="flags/pt.png" alt="Portugues" onclick="changeLanguage('pt')">
+                <img src="flags/pl.png" alt="Polski" onclick="changeLanguage('pl')">
+                <img src="flags/da.png" alt="Dansk" onclick="changeLanguage('da')">
+                <img src="flags/fi.png" alt="Suomi" onclick="changeLanguage('fi')">
+                <img src="flags/el.png" alt="Ελληνικά" onclick="changeLanguage('el')">
+                <img src="flags/hu.png" alt="Magyar" onclick="changeLanguage('hu')">
+                <img src="flags/ro.png" alt="Română" onclick="changeLanguage('ro')">
+                <img src="flags/sl.png" alt="Slovenščina" onclick="changeLanguage('sl')">
+                <img src="flags/bg.png" alt="Български" onclick="changeLanguage('bg')">
+                <img src="flags/lv.png" alt="Latviešu" onclick="changeLanguage('lv')">
+                <img src="flags/lt.png" alt="Lietuvių" onclick="changeLanguage('lt')">
+                <img src="flags/ee.png" alt="Eesti" onclick="changeLanguage('ee')">
+                <img src="flags/hr.png" alt="Hrvatski" onclick="changeLanguage('hr')">
+                <img src="flags/sk.png" alt="Slovenčina" onclick="changeLanguage('sk')">
+                <img src="flags/cs.png" alt="Čeština" onclick="changeLanguage('cs')">
+                <img src="flags/mt.png" alt="Malti" onclick="changeLanguage('mt')">
+                <img src="flags/ga.png" alt="Gaeilge" onclick="changeLanguage('ga')">
+            </div>
+            <div id="google_translate_element" style="visibility: hidden; position: absolute; height: 0; width: 0; overflow: hidden;"></div>
+        </div>
+
+        <h1 class="font-vino-rosso"><small>VINO</small><br> ROSSO NERO'</h1>
+        <p id="label-prodotto" class="notranslate" style="text-align: center; color: black;">PRODOTTO IN ITALIA</p>
+  
+        <h2>Ingredienti</h2>
+         <table class="table">
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Uva; <b>Anidrite Solforosa (Solfiti)</b></td>
+            </tr>
+        </table>
+
+ <h2>Dichiarazione Nutrizionale</h2>
+        <table class="table">
+            <tr>
+                <th><b>Valori medi</b></th>
+                <th><b>per<br>100 ml</b></th>
+            </tr>
+            <tr>
+                <td><b>Energia</b></td>
+                <td>312 kJ<br>
+		75 kcal</td>
+            </tr>
+            <tr>
+                <td><b>Grassi</b></td>
+                <td>0 g</td>
+            </tr>
+            <tr>
+                <td>di cui <b>acidi grassi saturi</b></td>
+                <td>0 g</td>
+            </tr>
+            <tr>
+                <td><b>Carboidrati</b></td>
+                <td>3.0 g</td>
+            </tr>
+            <tr>
+                <td>di cui <b>zuccheri</b></td>
+                <td>0 g</td>
+            </tr>
+            <tr>
+                <td><b>Proteine</b></td>
+                <td>0 g</td>
+            </tr>
+            <tr>
+                <td><b>Sale (Sodio)</b></td>
+                <td>0 g</td>
+            </tr>
+        </table>
+        <h2>Indicazioni di Smaltimento</h2>
+                <div class="table-wrapper">
+	        <table class="table table-smaltimento">
+            <tr>
+                <th></th>
+                <th>Descrizione</th>
+                <th>Codice</th>
+                
+            </tr>
+            <tr>
+                <td><img src="images/bottiglia pet.png" alt="Bottiglia" width="35"></td>
+                <td><b>BOTTIGLIA</b><br>
+                    Polietilene tereftalato<br>
+                    <p><em>Raccolta differenziata</em><br>
+		<b>PLASTICA</b></p></td>
+                <td><img src="images/pet1.png" alt="Codice PET1" width="50"></td>
+<tr class="striscia-gialla">
+
+        <td colspan="3"></td>
+
+
+            </tr>
+
+            <tr>
+                <td><img src="images/tappo pet.png" alt="tappo" width="50"></td>
+                <td><b>TAPPO</b><br>
+                    Polietilene ad alta densità<br>
+                    <p><em>Raccolta differenziata</em><br>
+		<b>PLASTICA</b></p></td>
+                <td><img src="images/pehd2.png" alt="Codice PE-HD2" width="50"></td>
+<tr class="striscia-gialla">
+
+        <td colspan="3"></td>
+
+
+            </tr>
+            
+        </table>
+
+         <h3><em>Indicazioni valide solo per l'Italia.</em> Verifica le disposizioni del tuo Comune.</em></h3>
+
+
+        <h2>Consumo Responsabile</h2>
+<table class="table table-consumo">
+    <thead>
+        <tr>
+            <th style="width: 100%;"></th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="consumo-responsabile-container">
+                <img src="icons/no_pregnant.png" alt="Divieto per donne in gravidanza">
+                <img src="icons/no_drive.png" alt="Divieto di guida">
+                <img src="icons/no_under18.png" alt="Divieto per minori di 18 anni">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+        <p style="text-align: center; color: black;">© 2026 GraficaMente | Tutti i diritti riservati.<br>
+Designed by <b>GraficaMente.</b></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

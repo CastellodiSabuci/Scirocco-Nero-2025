@@ -1,0 +1,217 @@
+/* Layout Generale */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background-color: #f4f4f9; 
+    top: 0px !important;
+}
+
+.container { 
+    max-width: 800px; 
+    margin: auto; 
+    background: white; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8); 
+    border-left: 10px solid #622047;
+    border-right: 10px solid #622047;
+} /* <-- Parentesi di chiusura di .container aggiunta correttamente */
+
+/* Titoli h2 e h3 estratti e resi indipendenti */
+h2, h3 {
+    color: black;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px; /* Crea spazio tra il logo e la linea */
+    border-bottom: 4px solid #622047; /* Crea la striscia arancione. Sostituisci con #FFD700 per farla gialla */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+/* Tipografia */
+.font-vino-rosso {
+    font-family: "Tryst", serif;
+    font-weight: normal;
+    font-size: 36px;
+    color: #622047;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* Tabelle Responsive */
+.table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+    background-color: white; 
+    color: black;
+    table-layout: auto; /* Cambiato da fixed a auto per permettere un adattamento migliore */
+    word-wrap: break-word;
+    overflow: hidden; /* Evita che la tabella stessa crei scroll */
+}
+
+/* Fix per evitare lo scroll orizzontale del body */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.table th, .table td {
+    padding: 8px 4px; /* Ridotto leggermente il padding per mobile */
+    border: 1.5px solid #9C9C9C;
+    text-align: center;
+    font-size: 14px; /* Dimensione font ottimale per mobile */
+}
+
+.table th { background-color: #622047; color: white; }
+
+/* Allarga leggermente la seconda colonna della tabella nutrizionale */
+.table tr td:last-child, 
+.table tr th:last-child {
+    width: 35%; /* Regola questo valore per allargarla a piacimento */
+}
+/* Rende le immagini delle tabelle adattabili */
+.table img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gestione icone consumo responsabile */
+.table td style { 
+    /* Questo corregge il contenitore inline che hai nell'HTML */
+    flex-wrap: wrap; 
+}
+
+/* Fix per la tabella smaltimento su schermi piccoli */
+.table-smaltimento td {
+    font-size: 12px; /* Testo leggermente più piccolo per far stare tutto */
+}
+/* Smaltimento e Strisce */
+.striscia-gialla { background-color: #FFD700; height: 5px; }
+.table-wrapper { overflow-x: auto; }
+
+/* Selettore Lingua */
+.flags { text-align: right; position: relative; }
+.flags button { background: none; border: none; cursor: pointer; padding: 10px; }
+.flags #language-dropdown { 
+    position: absolute; 
+    top: 55px; 
+    right: 0; 
+    background: white; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3); 
+    z-index: 1000; 
+    padding: 8px; 
+    
+    /* Layout Verticale */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+    /* Modifiche per visualizzazione intera */
+    width: 50px; 
+    max-height: none; /* Rimuove il limite dei 350px */
+    overflow-y: visible; /* Elimina la barra di scorrimento */
+}
+
+/* AGGIUNGI QUESTO: È fondamentale per forzare la chiusura */
+.flags #language-dropdown.hidden { 
+    display: none !important; 
+}
+
+.flags #language-dropdown img { 
+    width: 30px; 
+    height: auto; 
+    cursor: pointer; 
+    margin: 5px; 
+    transition: transform 0.2s;
+}
+
+.flags #language-dropdown img:hover { transform: scale(1.2); }
+
+/* Utility */
+.hidden { display: none; }
+.icon-container { display: flex; justify-content: space-around; align-items: center; }
+
+/* Google Translate Hiding */
+.goog-te-gadget img { display: none !important; }
+.skiptranslate { display: none !important; }
+
+/* Container icone Consumo Responsabile */
+.consumo-responsabile-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important; /* Distribuisce le icone con spazi uguali */
+    align-items: center;
+    padding: 20px 10px !important; /* Aumentato leggermente il padding verticale */
+    width: 100%;
+    box-sizing: border-box; /* Assicura che il padding non crei scroll */
+}
+
+.consumo-responsabile-container img {
+    max-width: 60px; /* Dimensione bilanciata per le icone */
+    height: auto;
+    flex: 0 1 auto;
+}
+
+/* Specifica le larghezze per la tabella smaltimento */
+.table-smaltimento th:nth-child(1), 
+.table-smaltimento td:nth-child(1) {
+    width: 15%; /* Stringe la prima colonna (immagini icone) */
+}
+
+.table-smaltimento th:nth-child(2), 
+.table-smaltimento td:nth-child(2) {
+    width: 70%; 
+    text-align: center; /* Allineamento al centro richiesto */
+    font-size: 16px;    /* Testo leggermente più grande (era 12px/14px) */
+    font-weight: 500;   /* Opzionale: un po' più di corpo per la leggibilità */
+    padding: 10px 5px;
+}
+
+.table-smaltimento th:nth-child(3), 
+.table-smaltimento td:nth-child(3) {
+    width: 15%; /* Stringe la terza colonna (codici riciclo) */
+}
+.table-consumo tr td:last-child, 
+.table-consumo tr th:last-child {
+    width: 100% !important; 
+}
+
+.table-consumo {
+    width: 100% !important;
+    table-layout: fixed; /* Obbliga la tabella a rispettare il 100% */
+}
+
+.table-consumo td {
+    border: 1.5px solid #9C9C9C;
+    padding: 0 !important;
+}
+
+/* Distribuzione icone con spazi uguali */
+.consumo-responsabile-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important; 
+    align-items: center;
+    padding: 15px 0 !important;
+    width: 100%;
+}
+
+.consumo-responsabile-container img {
+    max-width: 55px;
+    height: auto;
+}
+
+/* Rimuove lo scroll orizzontale residuo */
+.table-wrapper {
+    overflow-x: hidden; /* Se non serve scroll, lo nascondiamo */
+}
